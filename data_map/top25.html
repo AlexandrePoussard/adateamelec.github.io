@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS = false; L_NO_TOUCH = false; L_DISABLE_3D = false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <style> #map_f8672507514947acba668f39852b5d6d {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css" />
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_f8672507514947acba668f39852b5d6d" ></div>
+        
+</body>
+<script>    
+    
+
+            
+                var bounds = null;
+            
+
+            var map_f8672507514947acba668f39852b5d6d = L.map(
+                                  'map_f8672507514947acba668f39852b5d6d',
+                                  {center: [30.0,5.0],
+                                  zoom: 2,
+                                  maxBounds: bounds,
+                                  layers: [],
+                                  worldCopyJump: false,
+                                  crs: L.CRS.EPSG3857
+                                 });
+            
+        
+    
+            var tile_layer_957a1e11ab894acb82024c34fb92cad4 = L.tileLayer(
+                'https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(map_f8672507514947acba668f39852b5d6d);
+        
+    
+            var marker_cluster_91e2e5ad015049a9a87ccc13fba264f4 = L.markerClusterGroup({
+                
+            });
+            map_f8672507514947acba668f39852b5d6d.addLayer(marker_cluster_91e2e5ad015049a9a87ccc13fba264f4);
+            
+    
+
+            var marker_4c83c6d94dae4e69bae91a098565da99 = L.marker(
+                [34.596934,43.679485],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_91e2e5ad015049a9a87ccc13fba264f4);
+            
+    
+
+                var icon_f5c5105036cf4d4fae5d833eef582ac8 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_4c83c6d94dae4e69bae91a098565da99.setIcon(icon_f5c5105036cf4d4fae5d833eef582ac8);
+            
+    
+            var popup_fde2ecd5ebdb4d5c8d8b9713ce90f916 = L.popup({maxWidth: '300'});
+
+            
+                var html_ba10d837a23d403ba64aa11919c4d57a = $('<div id="html_ba10d837a23d403ba64aa11919c4d57a" style="width: 100.0%; height: 100.0%;">Terror attack in Tikrit<br>Date: 12.6.2014<br>Target: Military<br>Perpetrators: Islamic State of Iraq and the Levant (ISIL) with Firearms<br>Casualties: 1500</div>')[0];
+                popup_fde2ecd5ebdb4d5c8d8b9713ce90f916.setContent(html_ba10d837a23d403ba64aa11919c4d57a);
+            
+
+            marker_4c83c6d94dae4e69bae91a098565da99.bindPopup(popup_fde2ecd5ebdb4d5c8d8b9713ce90f916);
+
+            
+        
+    
+
+            var marker_d38922cd81ac406bb7c80a6f20fe07b2 = L.marker(
+                [40.712784,-74.005941],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_91e2e5ad015049a9a87ccc13fba264f4);
+            
+    
+
+                var icon_48caa459e82e40deaf09af71f61d09a2 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d38922cd81ac406bb7c80a6f20fe07b2.setIcon(icon_48caa459e82e40deaf09af71f61d09a2);
+            
+    
+            var popup_0377d195e46041f099e351c959d64961 = L.popup({maxWidth: '300'});
+
+            
+                var html_9025302a8972489f8617119d32659139 = $('<div id="html_9025302a8972489f8617119d32659139" style="width: 100.0%; height: 100.0%;">Terror attack in New York City<br>Date: 11.9.2001<br>Target: Private Citizens & Property<br>Perpetrators: Al-Qaida with Vehicle (not to include vehicle-borne explosives, i.e., car or truck bombs)<br>Casualties: 1383</div>')[0];
+                popup_0377d195e46041f099e351c959d64961.setContent(html_9025302a8972489f8617119d32659139);
+            
+
+            marker_d38922cd81ac406bb7c80a6f20fe07b2.bindPopup(popup_0377d195e46041f099e351c959d64961);
+
+            
+        
+    
+
+            var marker_9aff2fc4024340e3974d0fcb9691df76 = L.marker(
+                [40.712784,-74.005941],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_91e2e5ad015049a9a87ccc13fba264f4);
+            
+    
+
+                var icon_45f83a3b5e474f33b6fa5959669205d2 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_9aff2fc4024340e3974d0fcb9691df76.setIcon(icon_45f83a3b5e474f33b6fa5959669205d2);
+            
+    
+            var popup_d8b167ddcdcd4da1bc9cbbcc3b3d11c4 = L.popup({maxWidth: '300'});
+
+            
+                var html_73ebd000a53e4125bd1ec02e98a402aa = $('<div id="html_73ebd000a53e4125bd1ec02e98a402aa" style="width: 100.0%; height: 100.0%;">Terror attack in New York City<br>Date: 11.9.2001<br>Target: Private Citizens & Property<br>Perpetrators: Al-Qaida with Vehicle (not to include vehicle-borne explosives, i.e., car or truck bombs)<br>Casualties: 1382</div>')[0];
+                popup_d8b167ddcdcd4da1bc9cbbcc3b3d11c4.setContent(html_73ebd000a53e4125bd1ec02e98a402aa);
+            
+
+            marker_9aff2fc4024340e3974d0fcb9691df76.bindPopup(popup_d8b167ddcdcd4da1bc9cbbcc3b3d11c4);
+
+            
+        
+    
+
+            var marker_d44fdcd46d694ece90179bb923df38a4 = L.marker(
+                [-1.932787,30.332456],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_91e2e5ad015049a9a87ccc13fba264f4);
+            
+    
+
+                var icon_29520d92c7634b7ebc7737d46ee6f304 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d44fdcd46d694ece90179bb923df38a4.setIcon(icon_29520d92c7634b7ebc7737d46ee6f304);
+            
+    
+            var popup_f1af1662db4a4a0aaa7a374940ce17bb = L.popup({maxWidth: '300'});
+
+            
+                var html_f270c69afb8544dda0e8f0277f00667b = $('<div id="html_f270c69afb8544dda0e8f0277f00667b" style="width: 100.0%; height: 100.0%;">Terror attack in Gikoro<br>Date: 13.4.1994<br>Target: Private Citizens & Property<br>Perpetrators: Hutu extremists with Firearms<br>Casualties: 1180</div>')[0];
+                popup_f1af1662db4a4a0aaa7a374940ce17bb.setContent(html_f270c69afb8544dda0e8f0277f00667b);
+            
+
+            marker_d44fdcd46d694ece90179bb923df38a4.bindPopup(popup_f1af1662db4a4a0aaa7a374940ce17bb);
+
+            
+        
+    
+
+            var marker_77a47a40b69549b8bd6876807548fd56 = L.marker(
+                [36.399408,42.963613],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_91e2e5ad015049a9a87ccc13fba264f4);
+            
+    
+
+                var icon_20e062b305d943ae9472fe456125853e = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_77a47a40b69549b8bd6876807548fd56.setIcon(icon_20e062b305d943ae9472fe456125853e);
+            
+    
+            var popup_c82682ff870f45929533a732593a7b41 = L.popup({maxWidth: '300'});
+
+            
+                var html_2851576366d748adac21be4dbea704cd = $('<div id="html_2851576366d748adac21be4dbea704cd" style="width: 100.0%; height: 100.0%;">Terror attack in Badush<br>Date: 10.6.2014<br>Target: Police<br>Perpetrators: Islamic State of Iraq and the Levant (ISIL) with Explosives/Bombs/Dynamite<br>Casualties: 670</div>')[0];
+                popup_c82682ff870f45929533a732593a7b41.setContent(html_2851576366d748adac21be4dbea704cd);
+            
+
+            marker_77a47a40b69549b8bd6876807548fd56.bindPopup(popup_c82682ff870f45929533a732593a7b41);
+
+            
+        
+    
+
+            var marker_b293a7451ba440baa2bb48e2ca666fcc = L.marker(
+                [27.959441,84.895897],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_91e2e5ad015049a9a87ccc13fba264f4);
+            
+    
+
+                var icon_73a2264bf5d249e18ab5010628f45e2b = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_b293a7451ba440baa2bb48e2ca666fcc.setIcon(icon_73a2264bf5d249e18ab5010628f45e2b);
+            
+    
+            var popup_4a49de490c1c406fb8fe602a308bfb7e = L.popup({maxWidth: '300'});
+
+            
+                var html_b78dc0c0a4e041d58881a7638b15da1e = $('<div id="html_b78dc0c0a4e041d58881a7638b15da1e" style="width: 100.0%; height: 100.0%;">Terror attack in Dhading district<br>Date: 21.3.2004<br>Target: Government (General)<br>Perpetrators: Communist Party of Nepal- Maoist (CPN-M) with Firearms<br>Casualties: 518</div>')[0];
+                popup_4a49de490c1c406fb8fe602a308bfb7e.setContent(html_b78dc0c0a4e041d58881a7638b15da1e);
+            
+
+            marker_b293a7451ba440baa2bb48e2ca666fcc.bindPopup(popup_4a49de490c1c406fb8fe602a308bfb7e);
+
+            
+        
+    
+
+            var marker_12c5b95f33bd4780bb4674237d856dcd = L.marker(
+                [35.959198,38.998018],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_91e2e5ad015049a9a87ccc13fba264f4);
+            
+    
+
+                var icon_c6dbd18958094a6580a42f5810ae38cc = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_12c5b95f33bd4780bb4674237d856dcd.setIcon(icon_c6dbd18958094a6580a42f5810ae38cc);
+            
+    
+            var popup_f59bb4fa26374c2a92a689c55c7d3706 = L.popup({maxWidth: '300'});
+
+            
+                var html_91b83e5124774ea38f8bbc30d1d0a5d5 = $('<div id="html_91b83e5124774ea38f8bbc30d1d0a5d5" style="width: 100.0%; height: 100.0%;">Terror attack in Unknown<br>Date: 19.8.2014<br>Target: Military<br>Perpetrators: Islamic State of Iraq and the Levant (ISIL) with Explosives/Bombs/Dynamite<br>Casualties: 517</div>')[0];
+                popup_f59bb4fa26374c2a92a689c55c7d3706.setContent(html_91b83e5124774ea38f8bbc30d1d0a5d5);
+            
+
+            marker_12c5b95f33bd4780bb4674237d856dcd.bindPopup(popup_f59bb4fa26374c2a92a689c55c7d3706);
+
+            
+        
+    
+
+            var marker_1102ce2699bc4d31977af3a7e9c93059 = L.marker(
+                [36.32,41.86],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_91e2e5ad015049a9a87ccc13fba264f4);
+            
+    
+
+                var icon_077ea2e1105d493aabd889523a8ed27a = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_1102ce2699bc4d31977af3a7e9c93059.setIcon(icon_077ea2e1105d493aabd889523a8ed27a);
+            
+    
+            var popup_70d5eb0df2e9465faeb682917285d27c = L.popup({maxWidth: '300'});
+
+            
+                var html_7cd0844964c34b16bac6a9c75c6e3f20 = $('<div id="html_7cd0844964c34b16bac6a9c75c6e3f20" style="width: 100.0%; height: 100.0%;">Terror attack in Sinjar<br>Date: 3.8.2014<br>Target: Private Citizens & Property<br>Perpetrators: Islamic State of Iraq and the Levant (ISIL) with Unknown<br>Casualties: 500</div>')[0];
+                popup_70d5eb0df2e9465faeb682917285d27c.setContent(html_7cd0844964c34b16bac6a9c75c6e3f20);
+            
+
+            marker_1102ce2699bc4d31977af3a7e9c93059.bindPopup(popup_70d5eb0df2e9465faeb682917285d27c);
+
+            
+        
+    
+
+            var marker_1e1737ab885348d1acfa1c23237c1918 = L.marker(
+                [34.570012,38.292165],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_91e2e5ad015049a9a87ccc13fba264f4);
+            
+    
+
+                var icon_ae58d97566204a52a9e42283625995eb = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_1e1737ab885348d1acfa1c23237c1918.setIcon(icon_ae58d97566204a52a9e42283625995eb);
+            
+    
+            var popup_3c7759976bd94d2f9f144362cd10c2c8 = L.popup({maxWidth: '300'});
+
+            
+                var html_4b1ca37e65f140a5acd69477db93ab7d = $('<div id="html_4b1ca37e65f140a5acd69477db93ab7d" style="width: 100.0%; height: 100.0%;">Terror attack in Palmyra<br>Date: 10.12.2016<br>Target: Private Citizens & Property<br>Perpetrators: Islamic State of Iraq and the Levant (ISIL) with Explosives/Bombs/Dynamite<br>Casualties: 433</div>')[0];
+                popup_3c7759976bd94d2f9f144362cd10c2c8.setContent(html_4b1ca37e65f140a5acd69477db93ab7d);
+            
+
+            marker_1e1737ab885348d1acfa1c23237c1918.bindPopup(popup_3c7759976bd94d2f9f144362cd10c2c8);
+
+            
+        
+    
+
+            var marker_bb77d5f809944c31bd1b7d43233ca1af = L.marker(
+                [30.347171,48.292706],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_91e2e5ad015049a9a87ccc13fba264f4);
+            
+    
+
+                var icon_36a180ea669145b98e32eb48c4e2aa3c = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_bb77d5f809944c31bd1b7d43233ca1af.setIcon(icon_36a180ea669145b98e32eb48c4e2aa3c);
+            
+    
+            var popup_ee2e9fe0a5d64f96a56fcbfa626a5f18 = L.popup({maxWidth: '300'});
+
+            
+                var html_b6eec33de662414da8022f851850b6f4 = $('<div id="html_b6eec33de662414da8022f851850b6f4" style="width: 100.0%; height: 100.0%;">Terror attack in Abadan<br>Date: 19.8.1978<br>Target: Business<br>Perpetrators: Mujahedin-e Khalq (MEK) with Incendiary<br>Casualties: 422</div>')[0];
+                popup_ee2e9fe0a5d64f96a56fcbfa626a5f18.setContent(html_b6eec33de662414da8022f851850b6f4);
+            
+
+            marker_bb77d5f809944c31bd1b7d43233ca1af.bindPopup(popup_ee2e9fe0a5d64f96a56fcbfa626a5f18);
+
+            
+        
+    
+
+            var marker_969b892dafb04f3d843dc56525152f89 = L.marker(
+                [3.292111,29.168137],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_91e2e5ad015049a9a87ccc13fba264f4);
+            
+    
+
+                var icon_b1640f2bf7634b5c8c4a7e716a73f27b = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_969b892dafb04f3d843dc56525152f89.setIcon(icon_b1640f2bf7634b5c8c4a7e716a73f27b);
+            
+    
+            var popup_1155fc2ab50041e88351b22c58168f21 = L.popup({maxWidth: '300'});
+
+            
+                var html_886cd5901dfc46b09a39dd4598e84ef5 = $('<div id="html_886cd5901dfc46b09a39dd4598e84ef5" style="width: 100.0%; height: 100.0%;">Terror attack in Tora<br>Date: 17.1.2009<br>Target: Religious Figures/Institutions<br>Perpetrators: Lords Resistance Army (LRA) with Incendiary<br>Casualties: 400</div>')[0];
+                popup_1155fc2ab50041e88351b22c58168f21.setContent(html_886cd5901dfc46b09a39dd4598e84ef5);
+            
+
+            marker_969b892dafb04f3d843dc56525152f89.bindPopup(popup_1155fc2ab50041e88351b22c58168f21);
+
+            
+        
+    
+
+            var marker_2b221fc1896b4bbaa652b45d93f9beec = L.marker(
+                [-23.738177,34.974707],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_91e2e5ad015049a9a87ccc13fba264f4);
+            
+    
+
+                var icon_561b7cac156e48e09c09045e7165a881 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_2b221fc1896b4bbaa652b45d93f9beec.setIcon(icon_561b7cac156e48e09c09045e7165a881);
+            
+    
+            var popup_2c0c41a88c624709b6312195e91f40ed = L.popup({maxWidth: '300'});
+
+            
+                var html_592c6d6342aa42f7ae2f60c9097faf3a = $('<div id="html_592c6d6342aa42f7ae2f60c9097faf3a" style="width: 100.0%; height: 100.0%;">Terror attack in Homoine<br>Date: 18.7.1987<br>Target: Private Citizens & Property<br>Perpetrators: Mozambique National Resistance Movement (MNR) with Firearms<br>Casualties: 388</div>')[0];
+                popup_2c0c41a88c624709b6312195e91f40ed.setContent(html_592c6d6342aa42f7ae2f60c9097faf3a);
+            
+
+            marker_2b221fc1896b4bbaa652b45d93f9beec.bindPopup(popup_2c0c41a88c624709b6312195e91f40ed);
+
+            
+        
+    
+
+            var marker_21d16da06cf24cf6afff0c0208bd7889 = L.marker(
+                [33.252314,44.485965],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_91e2e5ad015049a9a87ccc13fba264f4);
+            
+    
+
+                var icon_a70ce7881ce64d05980608de3443907e = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_21d16da06cf24cf6afff0c0208bd7889.setIcon(icon_a70ce7881ce64d05980608de3443907e);
+            
+    
+            var popup_6967c9c707a44e4382aa89d86b1fae2e = L.popup({maxWidth: '300'});
+
+            
+                var html_97ccc1f346e44a668506fd32f657e7c9 = $('<div id="html_97ccc1f346e44a668506fd32f657e7c9" style="width: 100.0%; height: 100.0%;">Terror attack in Baghdad<br>Date: 3.7.2016<br>Target: Business<br>Perpetrators: Islamic State of Iraq and the Levant (ISIL) with Explosives/Bombs/Dynamite<br>Casualties: 383</div>')[0];
+                popup_6967c9c707a44e4382aa89d86b1fae2e.setContent(html_97ccc1f346e44a668506fd32f657e7c9);
+            
+
+            marker_21d16da06cf24cf6afff0c0208bd7889.bindPopup(popup_6967c9c707a44e4382aa89d86b1fae2e);
+
+            
+        
+    
+
+            var marker_9db3005c75494ad7a62879417909d86c = L.marker(
+                [-3.016027,29.450726],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_91e2e5ad015049a9a87ccc13fba264f4);
+            
+    
+
+                var icon_5fbe43fe9c894fdf91f2d4a30c020742 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_9db3005c75494ad7a62879417909d86c.setIcon(icon_5fbe43fe9c894fdf91f2d4a30c020742);
+            
+    
+            var popup_76d9844277ba4e5abfbf2476bd58540c = L.popup({maxWidth: '300'});
+
+            
+                var html_480570a1d40145b9adb0c5a2e8e30a4b = $('<div id="html_480570a1d40145b9adb0c5a2e8e30a4b" style="width: 100.0%; height: 100.0%;">Terror attack in Kivyuka<br>Date: 23.5.1996<br>Target: Private Citizens & Property<br>Perpetrators: Tutsi with Unknown<br>Casualties: 375</div>')[0];
+                popup_76d9844277ba4e5abfbf2476bd58540c.setContent(html_480570a1d40145b9adb0c5a2e8e30a4b);
+            
+
+            marker_9db3005c75494ad7a62879417909d86c.bindPopup(popup_76d9844277ba4e5abfbf2476bd58540c);
+
+            
+        
+    
+
+            var marker_8855b443dd5c49b393d5ed31b7d80642 = L.marker(
+                [43.191626,44.541763],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_91e2e5ad015049a9a87ccc13fba264f4);
+            
+    
+
+                var icon_5c94c3971ee041599994b5c43c391c97 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_8855b443dd5c49b393d5ed31b7d80642.setIcon(icon_5c94c3971ee041599994b5c43c391c97);
+            
+    
+            var popup_1020222ae79e424fb1a3197d3b372762 = L.popup({maxWidth: '300'});
+
+            
+                var html_aeb15a327d40459195ed83a9d458685f = $('<div id="html_aeb15a327d40459195ed83a9d458685f" style="width: 100.0%; height: 100.0%;">Terror attack in Beslan<br>Date: 1.9.2004<br>Target: Educational Institution<br>Perpetrators: Riyadus-Salikhin Reconnaissance and Sabotage Battalion of Chechen Martyrs with Explosives/Bombs/Dynamite<br>Casualties: 344</div>')[0];
+                popup_1020222ae79e424fb1a3197d3b372762.setContent(html_aeb15a327d40459195ed83a9d458685f);
+            
+
+            marker_8855b443dd5c49b393d5ed31b7d80642.bindPopup(popup_1020222ae79e424fb1a3197d3b372762);
+
+            
+        
+    
+
+            var marker_1b1b64aab41d4e059b313240ff5160da = L.marker(
+                [43.6666667,-79.4166667],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_91e2e5ad015049a9a87ccc13fba264f4);
+            
+    
+
+                var icon_6add7c5b2d124b1183cad4335e8cbd06 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_1b1b64aab41d4e059b313240ff5160da.setIcon(icon_6add7c5b2d124b1183cad4335e8cbd06);
+            
+    
+            var popup_18457aedf60d4f5ab834201ff99d9ff3 = L.popup({maxWidth: '300'});
+
+            
+                var html_d48e099d7c77488d8e1497d10a211892 = $('<div id="html_d48e099d7c77488d8e1497d10a211892" style="width: 100.0%; height: 100.0%;">Terror attack in Toronto<br>Date: 23.6.1985<br>Target: Airports & Aircraft<br>Perpetrators: Sikh Extremists with Explosives/Bombs/Dynamite<br>Casualties: 329</div>')[0];
+                popup_18457aedf60d4f5ab834201ff99d9ff3.setContent(html_d48e099d7c77488d8e1497d10a211892);
+            
+
+            marker_1b1b64aab41d4e059b313240ff5160da.bindPopup(popup_18457aedf60d4f5ab834201ff99d9ff3);
+
+            
+        
+    
+
+            var marker_5aae9e55faeb4e35a08d45fd9d37dde4 = L.marker(
+                [9.380289,80.377],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_91e2e5ad015049a9a87ccc13fba264f4);
+            
+    
+
+                var icon_d2049d87e0b74bc9b4422df012cafc73 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_5aae9e55faeb4e35a08d45fd9d37dde4.setIcon(icon_d2049d87e0b74bc9b4422df012cafc73);
+            
+    
+            var popup_22449c6fd61e4d3880bb49d7f582e252 = L.popup({maxWidth: '300'});
+
+            
+                var html_a8ca042254564e2ba3bef1afa9a96342 = $('<div id="html_a8ca042254564e2ba3bef1afa9a96342" style="width: 100.0%; height: 100.0%;">Terror attack in Kilinochchi<br>Date: 1.2.1998<br>Target: Military<br>Perpetrators: Liberation Tigers of Tamil Eelam (LTTE) with Unknown<br>Casualties: 320</div>')[0];
+                popup_22449c6fd61e4d3880bb49d7f582e252.setContent(html_a8ca042254564e2ba3bef1afa9a96342);
+            
+
+            marker_5aae9e55faeb4e35a08d45fd9d37dde4.bindPopup(popup_22449c6fd61e4d3880bb49d7f582e252);
+
+            
+        
+    
+
+            var marker_b13d1f15ea174a65aafe6b5dd691900e = L.marker(
+                [12.372109,14.21044],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_91e2e5ad015049a9a87ccc13fba264f4);
+            
+    
+
+                var icon_e356731cf4044e979be3afd58a665ab4 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_b13d1f15ea174a65aafe6b5dd691900e.setIcon(icon_e356731cf4044e979be3afd58a665ab4);
+            
+    
+            var popup_4827b3309dea48f3af32c32129dea83f = L.popup({maxWidth: '300'});
+
+            
+                var html_74dad376ebe9450da00c6659988c412e = $('<div id="html_74dad376ebe9450da00c6659988c412e" style="width: 100.0%; height: 100.0%;">Terror attack in Gamboru Ngala<br>Date: 5.5.2014<br>Target: Private Citizens & Property<br>Perpetrators: Boko Haram with Explosives/Bombs/Dynamite<br>Casualties: 315</div>')[0];
+                popup_4827b3309dea48f3af32c32129dea83f.setContent(html_74dad376ebe9450da00c6659988c412e);
+            
+
+            marker_b13d1f15ea174a65aafe6b5dd691900e.bindPopup(popup_4827b3309dea48f3af32c32129dea83f);
+
+            
+        
+    
+
+            var marker_e855f90274f04cdd9d34db0f1f4b9c69 = L.marker(
+                [34.608148,38.430948],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_91e2e5ad015049a9a87ccc13fba264f4);
+            
+    
+
+                var icon_6b77fae36c7449b19cdea06374d39a22 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_e855f90274f04cdd9d34db0f1f4b9c69.setIcon(icon_6b77fae36c7449b19cdea06374d39a22);
+            
+    
+            var popup_94ed9283e04f4dd2b241ae135780132c = L.popup({maxWidth: '300'});
+
+            
+                var html_b75d979a53b741f7a4baa5f6299e51e1 = $('<div id="html_b75d979a53b741f7a4baa5f6299e51e1" style="width: 100.0%; height: 100.0%;">Terror attack in Palmyra district<br>Date: 17.7.2014<br>Target: Business<br>Perpetrators: Islamic State of Iraq and the Levant (ISIL) with Explosives/Bombs/Dynamite<br>Casualties: 310</div>')[0];
+                popup_94ed9283e04f4dd2b241ae135780132c.setContent(html_b75d979a53b741f7a4baa5f6299e51e1);
+            
+
+            marker_e855f90274f04cdd9d34db0f1f4b9c69.bindPopup(popup_94ed9283e04f4dd2b241ae135780132c);
+
+            
+        
+    
+
+            var marker_27d25fad53c34ddb9e2ed14e7c9a8b5f = L.marker(
+                [34.368794,41.094472],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_91e2e5ad015049a9a87ccc13fba264f4);
+            
+    
+
+                var icon_7dfd0d13065c4203961049a1a20d5891 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_27d25fad53c34ddb9e2ed14e7c9a8b5f.setIcon(icon_7dfd0d13065c4203961049a1a20d5891);
+            
+    
+            var popup_115a5be88f1b443b9722ad0d711c68e9 = L.popup({maxWidth: '300'});
+
+            
+                var html_d40415d32dc94560b00090408a20da49 = $('<div id="html_d40415d32dc94560b00090408a20da49" style="width: 100.0%; height: 100.0%;">Terror attack in Qaim<br>Date: 9.4.2015<br>Target: Private Citizens & Property<br>Perpetrators: Islamic State of Iraq and the Levant (ISIL) with Unknown<br>Casualties: 300</div>')[0];
+                popup_115a5be88f1b443b9722ad0d711c68e9.setContent(html_d40415d32dc94560b00090408a20da49);
+            
+
+            marker_27d25fad53c34ddb9e2ed14e7c9a8b5f.bindPopup(popup_115a5be88f1b443b9722ad0d711c68e9);
+
+            
+        
+    
+
+            var marker_9e60c7d1ebea49478ffa6aaef3e4cab4 = L.marker(
+                [-1.679123,29.261201],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_91e2e5ad015049a9a87ccc13fba264f4);
+            
+    
+
+                var icon_fcb02026b41c403a83f3b4ecd0312b69 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_9e60c7d1ebea49478ffa6aaef3e4cab4.setIcon(icon_fcb02026b41c403a83f3b4ecd0312b69);
+            
+    
+            var popup_0e36a095ebbc426ab5dfdce6992a89e7 = L.popup({maxWidth: '300'});
+
+            
+                var html_34882c7093f545fd91465293ba05c5ad = $('<div id="html_34882c7093f545fd91465293ba05c5ad" style="width: 100.0%; height: 100.0%;">Terror attack in Gisenyi<br>Date: 17.11.1997<br>Target: Police<br>Perpetrators: Hutu extremists with Unknown<br>Casualties: 300</div>')[0];
+                popup_0e36a095ebbc426ab5dfdce6992a89e7.setContent(html_34882c7093f545fd91465293ba05c5ad);
+            
+
+            marker_9e60c7d1ebea49478ffa6aaef3e4cab4.bindPopup(popup_0e36a095ebbc426ab5dfdce6992a89e7);
+
+            
+        
+    
+
+            var marker_7023269154aa4d548d56ad2eb85dee92 = L.marker(
+                [9.999547,29.398746],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_91e2e5ad015049a9a87ccc13fba264f4);
+            
+    
+
+                var icon_adf12838413a4ec1a43699ab1ace5c1a = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_7023269154aa4d548d56ad2eb85dee92.setIcon(icon_adf12838413a4ec1a43699ab1ace5c1a);
+            
+    
+            var popup_be3e983ca71e4baf924436eddc44b599 = L.popup({maxWidth: '300'});
+
+            
+                var html_912dac3d75554935a793a091cc00fe0b = $('<div id="html_912dac3d75554935a793a091cc00fe0b" style="width: 100.0%; height: 100.0%;">Terror attack in Heglig<br>Date: 13.2.1984<br>Target: Maritime<br>Perpetrators: Christian extremists with Unknown<br>Casualties: 300</div>')[0];
+                popup_be3e983ca71e4baf924436eddc44b599.setContent(html_912dac3d75554935a793a091cc00fe0b);
+            
+
+            marker_7023269154aa4d548d56ad2eb85dee92.bindPopup(popup_be3e983ca71e4baf924436eddc44b599);
+
+            
+        
+    
+
+            var marker_be2d16bffbfc48d092357fb80cb819c7 = L.marker(
+                [13.933732,-89.025836],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_91e2e5ad015049a9a87ccc13fba264f4);
+            
+    
+
+                var icon_c32c4379a7e54bbcbf1cbc997fe49370 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_be2d16bffbfc48d092357fb80cb819c7.setIcon(icon_c32c4379a7e54bbcbf1cbc997fe49370);
+            
+    
+            var popup_7cfe9f1f64104bdeb0efcd6529b84271 = L.popup({maxWidth: '300'});
+
+            
+                var html_69fac31178614a3daa03578849a7850d = $('<div id="html_69fac31178614a3daa03578849a7850d" style="width: 100.0%; height: 100.0%;">Terror attack in Suchitoto<br>Date: 15.8.1980<br>Target: Military<br>Perpetrators: nan with Firearms<br>Casualties: 300</div>')[0];
+                popup_7cfe9f1f64104bdeb0efcd6529b84271.setContent(html_69fac31178614a3daa03578849a7850d);
+            
+
+            marker_be2d16bffbfc48d092357fb80cb819c7.bindPopup(popup_7cfe9f1f64104bdeb0efcd6529b84271);
+
+            
+        
+    
+
+            var marker_d960657ffb344768b128b7251b3b88d7 = L.marker(
+                [36.337873,43.130884],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_91e2e5ad015049a9a87ccc13fba264f4);
+            
+    
+
+                var icon_44a7565f4f014460abc287066e18f41f = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d960657ffb344768b128b7251b3b88d7.setIcon(icon_44a7565f4f014460abc287066e18f41f);
+            
+    
+            var popup_c790905ade5f4d0d85cc4e9d3ed6cbd1 = L.popup({maxWidth: '300'});
+
+            
+                var html_e7c2d0f282014cb9af3d5efa3db331d4 = $('<div id="html_e7c2d0f282014cb9af3d5efa3db331d4" style="width: 100.0%; height: 100.0%;">Terror attack in Mosul<br>Date: 7.2.2016<br>Target: Police<br>Perpetrators: Islamic State of Iraq and the Levant (ISIL) with Unknown<br>Casualties: 300</div>')[0];
+                popup_c790905ade5f4d0d85cc4e9d3ed6cbd1.setContent(html_e7c2d0f282014cb9af3d5efa3db331d4);
+            
+
+            marker_d960657ffb344768b128b7251b3b88d7.bindPopup(popup_c790905ade5f4d0d85cc4e9d3ed6cbd1);
+
+            
+        
+    
+
+            var marker_f5f295adb84c43668e1d8f64f47335c9 = L.marker(
+                [48.139156,38.639335],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_91e2e5ad015049a9a87ccc13fba264f4);
+            
+    
+
+                var icon_31ecc44cfa7d4324a7dc5fad88addd64 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_f5f295adb84c43668e1d8f64f47335c9.setIcon(icon_31ecc44cfa7d4324a7dc5fad88addd64);
+            
+    
+            var popup_45891fc58943419d800fb2b49c27dbd9 = L.popup({maxWidth: '300'});
+
+            
+                var html_639cff8ca2464f9f963beca7bdded23f = $('<div id="html_639cff8ca2464f9f963beca7bdded23f" style="width: 100.0%; height: 100.0%;">Terror attack in Hrabove<br>Date: 17.7.2014<br>Target: Airports & Aircraft<br>Perpetrators: Donetsk Peoples Republic with Explosives/Bombs/Dynamite<br>Casualties: 298</div>')[0];
+                popup_45891fc58943419d800fb2b49c27dbd9.setContent(html_639cff8ca2464f9f963beca7bdded23f);
+            
+
+            marker_f5f295adb84c43668e1d8f64f47335c9.bindPopup(popup_45891fc58943419d800fb2b49c27dbd9);
+
+            
+        
+</script>
