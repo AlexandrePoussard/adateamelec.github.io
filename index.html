@@ -198,7 +198,7 @@
 				    node = svg.append("g").selectAll(".node");
 
 
-				d3.json("data/flare.json", function(error, classes) {
+				d3.json("data/clusterN1.json", function(error, classes) {
 				  	if (error) throw error;
 
 					var root = packageHierarchy(classes)
