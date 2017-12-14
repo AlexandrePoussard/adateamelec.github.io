@@ -133,6 +133,16 @@
 						</header>
 					</div>
 				</section>
+
+				<!-- Chord Diagram -->
+				<section id="diagram" class="wrapper alt style1" style="background-color: gray; padding-top: 50px; padding-bottom: 35px;">
+					<div class="inner txt">
+						<header class="major">
+							<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
+							<div id="ennemy"></div>
+						</header>
+					</div>
+				</section>
 				
 
 				<!-- Footer -->
@@ -141,10 +151,10 @@
 							<li>&copy; ADamnTeam</li><li><a href="mailto:apoussard@gmail.com" class="icon fa-envelope-o"> Contact Us<span class="label"></span></a></li>
 						</ul>
 					</footer>
-
 			</div>
 
 		<!-- Scripts -->
+			<script src="https://d3js.org/d3.v4.min.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -164,6 +174,82 @@
         				}); 
 				    });
 				});
+
+
+				var diameter = 960,
+				    radius = diameter / 2,
+				    innerRadius = radius - 120;
+
+				var cluster = d3.cluster()
+				    .size([360, innerRadius]);
+
+				var line = d3.radialLine()
+				    .curve(d3.curveBundle.beta(0.85))
+				    .radius(function(d) { return d.y; })
+				    .angle(function(d) { return d.x / 180 * Math.PI; });
+
+				var svg = d3.select("#ennemy").append("svg")
+				    .attr("width", diameter)
+				    .attr("height", diameter)
+				  	.append("g")
+				    .attr("transform", "translate(" + radius + "," + radius + ")");
+
+				var link = svg.append("g").selectAll(".link"),
+				    node = svg.append("g").selectAll(".node");
+
+
+				d3.json("data/flare.json", function(error, classes) {
+				  	if (error) throw error;
+
+					var root = packageHierarchy(classes)
+						.sum(function(d) { return d.size; });
+
+				  	cluster(root);
+
+				  	link = link
+				   	 .data(packageImports(root.leaves()))
+				   		.enter().append("path")
+				      	.each(function(d) { d.source = d[0], d.target = d[d.length - 1]; })
+				      	.attr("class", "link")
+				      	.attr("d", line);
+
+				  	node = node
+				    	.data(root.leaves())
+				    	.enter().append("text")
+				      	.attr("class", "node")
+				      	.attr("dy", "0.31em")
+				      	.attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + (d.y + 8) + ",0)" + (d.x < 180 ? "" : "rotate(180)"); })
+				      	.attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
+				      	.text(function(d) { return d.data.key; })
+				      	.on("mouseover", mouseovered)
+				      	.on("mouseout", mouseouted);
+				});
+
+				function mouseovered(d) {
+					node
+				    	.each(function(n) { n.target = n.source = false; });
+
+				  	link
+				      	.classed("link--target", function(l) { if (l.target === d) return l.source.source = true; })
+				      	.classed("link--source", function(l) { if (l.source === d) return l.target.target = true; })
+				    	.filter(function(l) { return l.target === d || l.source === d; })
+				      	.raise();
+
+				  	node
+				      	.classed("node--target", function(n) { return n.target; })
+				      	.classed("node--source", function(n) { return n.source; });
+				}
+
+				function mouseouted(d) {
+				  	link
+				      	.classed("link--target", false)
+				      	.classed("link--source", false);
+
+				  	node
+				      	.classed("node--target", false)
+				      	.classed("node--source", false);
+				}
+
 			</script>
 	</body>
 </html>
