@@ -17,7 +17,7 @@
 		<style>
 			.node {
 			  font: 300 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
-			  fill: #bbb;
+			  /*fill: #000;*/
 			}
 
 			.node:hover {
@@ -37,12 +37,12 @@
 			  font-weight: 700;
 			}
 
-			.node--source {
-			  fill: #2ca02c;
+			.node--source { /*vert*/
+			  /*fill: #2ca02c;*/
 			}
 
-			.node--target {
-			  fill: #d62728;
+			.node--target { /*rouge*/
+			  /*fill: #d62728;*/
 			}
 
 			.link--source,
@@ -51,11 +51,11 @@
 			  stroke-width: 2px;
 			}
 
-			.link--source {
+			.link--source { /*rouge*/
 			  stroke: #d62728;
 			}
 
-			.link--target {
+			.link--target { /*vert*/
 			  stroke: #2ca02c;
 			}
 		</style>
@@ -185,8 +185,8 @@
 					<div class="inner txt">
 						<header class="major">
 							<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
-							<div id="ennemy"></div>
-						</header>
+							
+						</header><div id="ennemy"></div>
 					</div>
 				</section>
 				
@@ -225,7 +225,7 @@
 
 				var diameter = 960,
 				    radius = diameter / 2,
-				    innerRadius = radius - 240;
+				    innerRadius = radius - 310;
 
 				var cluster = d3.cluster()
 				    .size([360, innerRadius]);
@@ -250,9 +250,7 @@
 
 			        var root = d3.hierarchy(packageHierarchy(classes), (d) => d.children);
 			        var links = packageImports(root.descendants());
-			        console.dir(links);
 			        cluster(root);
-			        console.log(root);
 
 			        var nodes = root.descendants();
 
@@ -260,16 +258,16 @@
 			            .data(links)
 			            .enter().append('path')
 			            .attr('class', 'link')
-			            //.merge(edges)
 			            .attr('d', d => line(d.source.path(d.target)));
 
 			        node = node
 			            .data(nodes.filter(function(n) { return !n.children; }))
 			            .enter().append("text")
-			            .attr("class", "node")
+			            .attr("class", 'node')
 			            .attr("dy", ".31em")
 			            .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + (d.y + 8) + ",0)" + (d.x < 180 ? "" : "rotate(180)"); })
 			            .style("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
+			            .style("fill", function(d) {	return d.data.color;	})
 			            .text(function(d) { return d.data.key; })
 			            .on("mouseover", mouseovered)
 			            .on("mouseout", mouseouted);
@@ -336,6 +334,19 @@
 
 			        // Compute a map from name to node.
 			        nodes.forEach(function(d) {
+			        	switch (d.data.cluster){
+			        		case "0": d.data.color = "red"; break;
+			        		case "1": d.data.color = "blue"; break;
+			        		case "2": d.data.color = "Navy"; break;
+			        		case "3": d.data.color = "green"; break;
+			        		case "4": d.data.color = "orange"; break;
+			        		case "5": d.data.color = "MediumVioletRed"; break;
+			        		case "6": d.data.color = "rgb(203, 111, 66)"; break;
+			        		case "7": d.data.color = "brown"; break;
+							case "8": d.data.color = "Indigo"; break;
+			        		case "9": d.data.color = "OrangeRed"; break;
+			        		case "10": d.data.color = "Magenta"; break;
+			        	}
 			            map[d.data.name] = d;
 			        });
 
