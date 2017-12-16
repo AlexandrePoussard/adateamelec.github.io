@@ -25,7 +25,7 @@
 			}
 
 			.link {
-			  stroke: steelblue;
+			  stroke: #000;
 			  stroke-opacity: 0.4;
 			  fill: none;
 			  pointer-events: none;
@@ -290,7 +290,6 @@
 			    }
 
 			    function mouseouted(d) {
-			        console.log("moouseout");
 			        link
 			            .classed("link--target", false)
 			            .classed("link--source", false);
@@ -353,7 +352,7 @@
 			        // For each import, construct a link from the source to target node.
 			        nodes.forEach(function(d) {
 			            if (d.data.ennemy) d.data.ennemy.forEach(function(i) {
-			                imports.push({source: map[d.data.name], target: map[i]});
+			                imports.push({source: map[d.data.name], target: map[i], ennemy:"true"});
 			            });
 			        });
 
