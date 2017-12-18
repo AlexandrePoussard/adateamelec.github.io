@@ -310,10 +310,6 @@
 				d3.json("https://raw.githubusercontent.com/AlexandrePoussard/Climate-Change-Visualization/master/data/countries_custom.geo.json", function(error, json){
 			    	d3.json("https://www.alexandrepoussard.com/middle_east_late2016.json", function(error, data){
 			    		if (error) throw error;
-			    		
-			    		for (let i = 0; i < data.length; i++) {
-			    			
-			    		}
 
 			    		svg2.selectAll("path")
 							.data(json.features)
@@ -336,14 +332,30 @@
 						  	.selectAll("circle")
 						    .data(data)
 						  	.enter().append("circle")
-						    .attr("transform", function(d) { return "translate(" + d.latitude + ", " + d.longitude + ")"; })
-						    .style('fill', 'red')
-						    .on('mouseover', function(d){	return d.name;	})
-						    .attr("r", function(d){	return d.radius; });
+						  	.attr("cx", function(d) {	 return projection([d.longitude, d.latitude])[0];	})
+						  	.attr("cy", function(d) {	return projection([d.longitude, d.latitude])[1];	})
+						  	.attr("r",  function(d) {	return d.radius*5;	})
+						    .style('fill', function(d){
+						    	switch(d.name){
+						    		case "Palestinian Extremists": return "red"; break;
+					        		case "Fetullah Terrorist Organization": return "blue"; break;
+					        		case "Barqa Province of the Islamic State": return "Navy"; break;
+					        		case "Kurdistan Workers' Party (PKK)": return "green"; break;
+					        		case "Sinai Province of the Islamic State": return "orange"; break;
+					        		case "Hadramawt Province of the Islamic State": return "MediumVioletRed"; break;
+					        		case "Al-Qaida in the Arabian Peninsula (AQAP)": return "rgb(203, 111, 66)"; break;
+					        		case "Houthi extremists (Ansar Allah)": return "brown"; break;
+									case "Adan-Abyan Province of the Islamic State": return "Indigo"; break;
+					        		case "Islamic State of Iraq and the Levant (ISIL)": return "Aqua"; break;
+					        		case "Al-Nusrah Front": return "Magenta"; break;
+					        		case "Tripoli Province of the Islamic State": return "Magenta"; break;
+						    	}
+						    })
+						    .on('mouseover', function(d){	return d.name;	});
 			    	});
 				});
 
-
+// console.log(projection(d.longitude)[0]);
 				d3.json("https://www.alexandrepoussard.com/clusterN1.json", function(error, classes) {
 			        if (error) throw error;
 
