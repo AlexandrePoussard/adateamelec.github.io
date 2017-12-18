@@ -15,30 +15,6 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<style>
-			.bubble {
-			  fill-opacity: .5;
-			  stroke: #fff;
-			  stroke-width: .5px;
-			}
-
-			#cluster {
-				width: 100%;
-				height: 100%;
-				max-width: 100%;
-				max-height: 100%;
-			}
-
-			#cluster svg {
-				width: 100%;
-				background-color: rgba(135, 206, 250, 0.3);
-				height: 400;
-			}
-
-			#cluster g{
-				stroke:#000;
-				stroke-width: 0.15;
-			}
-
 			.node {
 			  font: 300 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
 			}
@@ -142,7 +118,7 @@
 								<h2>Some Statistics</h2>
 								<p>
 									Over the years, the number of attacks, and, as a result, the number of casualties linked to them has changed. There is a slow but steady increase of attacks from 1970 to 1992. Please note that in 1993 was not a year where a worldwide ceasefire was achieved, the lack of data comes from a misplacement of the data collected resulting in the complete loss of the year entries. That being said, a reduction in the number of terror attack is visible from 1994 to 2005. After that, the number of attacks increased again, with a peak in 2014, before slowly fading again. <br>
-									Those fluctuations of attacks, and casualties, are closely linked to the geopolitical situation of the world. For example, the high increase in the  number of attacks in 1989-1992 is linked to the collapse of the Soviet bloc as well as the first Gulf War and the turmoil it created. There is a peak of casualties in 2001 linked to the 9/11 Twin Tower  terror attack. Since 2012, the number of incident and casualties as particularly increased due to the appearance of Daesh and the multiplication of attacks led by this terrorist group. 
+									Those fluctuations of attacks, and casualties, are closely linked to the geopolitical situation of the world. For example, the high increase in the  number of attacks in 1989-1992 is linked to the collapse of the Soviet bloc as well as the first Gulf War and the turmoil it created. In 1997, the Algerian Civil war created a peak of victims. An other event can be highlighted in 2001, with many casualties linked to the 9/11 Twin Tower terror attack. Since 2012, the number of incident and casualties has particularly increased due to the appearance of Daesh and the multiplication of attacks led by this terrorist group. 
 								</p>
 							</div>
 							<div class="content">
@@ -154,7 +130,9 @@
 						<!-- heatmap -->
 						<section class="spotlight txt" style="padding-top: 50px; padding-bottom: 35px;">
 							<div class="image" style="margin-right: 4%;">
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla.</p>
+								<p>
+									Here we have a better visualization of the evolution of casualties over the years divided by months. The idea behind this figure was to see if there is a timely pattern when terror attacks would occur more often. There is not. We have however more precise view with more informations. We can for example spot the Rwandan Genocide that happened in April 1994. The Algerian Civil War and the <a href="https://en.wikipedia.org/wiki/Wilaya_of_Relizane_massacres_of_30_December_1997massacre">massacres<\a> perpetrated in December also stand out. As before, we can observe a peak of victims during the month of September 2011. The most terrible month happened in 2014, when in June, ISIS committed terrible attacks like the <a href="https://en.wikipedia.org/wiki/Badush_prison_massacre">Badush prison massacre</a>. 
+								</p>
 							</div>
 							<div class="content">
 								<img src="data/heatmap_casualties-1.svg" alt="heatmap_casualties" style="max-width: 95%;"/>
@@ -163,7 +141,9 @@
 
 						<section class="spotlight txt" style="padding-top: 35px; padding-bottom: 35px; background-color: rgba(0, 0, 0, 0.15);">
 							<div class="image" style="margin-right: 4%; padding-left: 7.5%;">
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula Aliquam ut ex ut augue consectetur interdum.</p>
+								<p>
+									An other way to visualize the attacks is to sort them by region and show the highest occurrences, and a similar approach ca be done for casualties. We see here for example a very high number of attacks during year 1970 and 1971 in North America, but according to the casualty heat map visualization, there has not be many victims in this region at that time. After some research, we found an explanation for this, a forgotten period during which many non lethal <a href="http://time.com/4501670/bombings-of-america-burrough/">terror attacks were conducted by left-wing activist in USA</a>. During the seventies also, many attacks happened in Europe. The very high number of attacks and casualties is linked to the Northern Ireland conflict, also called <a href="https://en.wikipedia.org/wiki/The_Troubles">The Troubles</a>, and the fight for independence of Basque Country in Spain where <a href="https://fr.wikipedia.org/wiki/Euskadi_ta_Askatasuna">ETA</a> was terrorizing population. Moving forward in time, in 1981 to 1983 in Central America, two civil wars in <a href="https://en.wikipedia.org/wiki/Guatemalan_Civil_War">Guatemala</a> and <a href="https://en.wikipedia.org/wiki/Salvadoran_Civil_War">Salvador</a> are responsible for the high amount of both attacks and casualties in this region at that time. South America has also its amount of terrorism during the conflicts in Columbia, Chile and Peru during the period 1983 to 1990. Since years 2000s, Middle East and North Africa became more and more unstable, with <a href="https://en.wikipedia.org/wiki/2003_invasion_of_Iraq">second Gulf War</a> and the <a href="https://en.wikipedia.org/wiki/Arab_Spring">Arab Spring</a>, and even more lately the appearance of ISIS, this region is going under a high amount of attacks leading to a significant amount of casualties.
+								</p>
 							</div>
 							<div class="content">
 								<img src="data/heatmap_reagionattacks-1.svg" alt="heatmap_reagionattacks" style="max-width: 100%;"/>
@@ -172,7 +152,9 @@
 
 						<section class="spotlight txt" style="padding-top: 35px; padding-bottom: 50px; background-color: rgba(0, 0, 0, 0.15);">
 							<div class="image" style="margin-right: 4%;">
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla.</p>
+								<p>
+									Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla.
+								</p>
 							</div>
 							<div class="content">
 								<img src="data/heatmap_regioncasualties-1.svg" alt="heatmap_regioncasualties" style="max-width: 100%;"/>
@@ -193,7 +175,10 @@
 						</div>
 					</section>
 					<div class="txt" style="width: 100%; padding-left: 14%; padding-right: 13%; padding-top: 4%;">
-						<p style="color: black;">Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla.</p>
+						<p style="color: black;">
+							The two plots above describe the mean of attacks (left) and the target of the attack (right). One can see that over the years, the use of explosive devices, firearms or the act of burning something where the most used weapons. The increase of attacks labelled as melee is linked to the fact that according to the definition, melee correspond to "A weapon—targeting people rather than property—that does not involve a projectile in which the user and target are in contact with it simultaneously.". Many incident from civil wars or regional troubles are labelled as melee, explaining the increase. More worrisome is to see the slow growth of chemical weapon use throughout the years. Also, we can see an increase in the use of vehicle to commit attacks, such as the recent one we saw across Western Europe. <br>
+							Regarding the evolution of targets, we can see that the main targets of terror attacks are Police, Government, Military, Business or Private Citizen & Property. One can notice the increase of incident targeting Religious Figures/Institution which were rare in the 70s and seem to become common over the last decade. A similar pattern is observable for Educational Institutions. The typical targets of terrorism has now changed, and additionally to locations symbolizing the government or its army, terrorist group are also more and more targeting private citizens or places related to religion or education. Today’s terrorism aims at destabilizing government, but also destroy knowledge and bring back obscurantism.
+						</p>
 					</div>
 				</section>
 
@@ -202,7 +187,9 @@
 				<section id="top25" class="wrapper alt style4 txt" style="padding-top: 50px; padding-bottom: 35px; background-color: rgb(154, 179, 203);">
 					<div class="inner">
 						<header class="major">
-							<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
+							<p>
+								You’ll find on the next map the 25 deadliest terror attacks registered in the dataset. By clicking on a pin you will have detailed informations about the attack. By exploring this map a bit you’ll find out that 9 of the deadliest attacks were perpetrated by ISIS after 2014.
+							</p>
 							<iframe src="data/top25.html" name="top" style="width:100%; height: 600px;"></iframe>
 						</header>
 					</div>
@@ -213,7 +200,9 @@
 				<section id="location" class="wrapper alt style1" style="background-color: black; padding-top: 50px; padding-bottom: 35px;">
 					<div class="inner txt">
 						<header class="major">
-							<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
+							<p>
+								On the map below are the approximate location of terrorist group according to the position of their attacks. Dots color represent the number of people killed by the group (green is zero, turning to red as the number increase) and the size of the dot illustrate the number of attack perpetrated by the group. By clicking on a dot, it displays more informations.
+							</p>
 							<iframe src="data/location_terrorists.html" name="location_terrorists" style="width:100%; height: 600px; padding-top: 2%;"></iframe>
 						</header>
 					</div>
@@ -225,22 +214,11 @@
 						<header class="major">
 							<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
 							
-						</header><div id="ennemy" style="text-align: center;"></div>
+						</header><div id="ennemy"></div>
 					</div>
 				</section>
+				
 
-				<!-- Cluster Map -->
-				
-				<section id="diagram" class="wrapper alt style1" style="background-color: white; padding-top: 50px; padding-bottom: 35px;">
-					<div class="inner txt">
-						<header class="major">
-							<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
-						</header>
-						<div id="cluster" style="width: 100%; height: 400px;"></div>
-					</div>
-				</section>
-				
-				
 				<!-- Footer -->
 					<footer id="footer">
 						<ul class="copyright">
@@ -258,7 +236,6 @@
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 			<script src="https://d3js.org/d3.v4.min.js"></script>
-			<script src="http://d3js.org/topojson.v1.min.js"></script>
 			<script src="https://d3js.org/d3-hierarchy.v1.min.js"></script>
 			<script type="text/javascript">
 				$(document).ready(function() {
@@ -272,6 +249,7 @@
         				}); 
 				    });
 				});
+
 
 				var diameter = 960,
 				    radius = diameter / 2,
@@ -293,55 +271,6 @@
 
 				var link = svg.append("g").selectAll(".link"),
 				    node = svg.append("g").selectAll(".node");
-
-				var projection = d3.geoEquirectangular()
-		        	.scale(460)
-		        	.translate([195, 450]);
-
-				var path = d3.geoPath()
-    				.projection(projection);
-
-    			var svg2 = d3.select('#cluster').append('svg')
-    				.attr("class", "rect")
-		        	.attr('width', '100%')
-		        	.attr('height', 400)
-		        	.append("g");
-
-				d3.json("https://raw.githubusercontent.com/AlexandrePoussard/Climate-Change-Visualization/master/data/countries_custom.geo.json", function(error, json){
-			    	d3.json("https://www.alexandrepoussard.com/middle_east_late2016.json", function(error, data){
-			    		if (error) throw error;
-			    		
-			    		for (let i = 0; i < data.length; i++) {
-			    			
-			    		}
-
-			    		svg2.selectAll("path")
-							.data(json.features)
-							.enter()
-							.append("path")
-							.attr("d", path)
-							.style("fill", 'white')
-							.attr("id", function(d) { return d.id; });
-
-						svg2.selectAll("text")
-							.data(json.features)
-							.enter().append("text")
-							.attr("transform", (d) => "translate(" + path.centroid(d) + ")")
-							.attr("dx", -5)
-							.attr('font-size', '35%')
-							.text((d) => d.properties.name);
-
-						svg2.append("g")
-						    .attr("class", "bubble")
-						  	.selectAll("circle")
-						    .data(data)
-						  	.enter().append("circle")
-						    .attr("transform", function(d) { return "translate(" + d.latitude + ", " + d.longitude + ")"; })
-						    .style('fill', 'red')
-						    .on('mouseover', function(d){	return d.name;	})
-						    .attr("r", function(d){	return d.radius; });
-			    	});
-				});
 
 
 				d3.json("https://www.alexandrepoussard.com/clusterN1.json", function(error, classes) {
@@ -377,8 +306,6 @@
 			            .on("mouseover", mouseovered)
 			            .on("mouseout", mouseouted);
 			    });
-
-			    
 
 
 		        function mouseovered(d) {
