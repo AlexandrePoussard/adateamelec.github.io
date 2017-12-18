@@ -15,6 +15,24 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<style>
+			#cluster {
+				width: 100%;
+				height: 100%;
+				max-width: 100%;
+				max-height: 100%;
+			}
+
+			#cluster svg {
+				width: 100%;
+				background-color: rgba(135, 206, 250, 0.3);
+				height: 400;
+			}
+
+			#cluster g{
+				stroke:#000;
+				stroke-width: 0.15;
+			}
+
 			.node {
 			  font: 300 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
 			}
@@ -206,6 +224,7 @@
 				</section>
 
 				<!-- Cluster Map -->
+				
 				<section id="diagram" class="wrapper alt style1" style="background-color: white; padding-top: 50px; padding-bottom: 35px;">
 					<div class="inner txt">
 						<header class="major">
@@ -233,6 +252,7 @@
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 			<script src="https://d3js.org/d3.v4.min.js"></script>
+			<script src="http://d3js.org/topojson.v1.min.js"></script>
 			<script src="https://d3js.org/d3-hierarchy.v1.min.js"></script>
 			<script type="text/javascript">
 				$(document).ready(function() {
@@ -268,6 +288,41 @@
 				var link = svg.append("g").selectAll(".link"),
 				    node = svg.append("g").selectAll(".node");
 
+				var projection = d3.geoEquirectangular()
+		        	.scale(460)
+		        	.translate([195, 450]);
+
+				var path = d3.geoPath()
+    				.projection(projection);
+
+    			var svg2 = d3.select('#cluster').append('svg')
+    				.attr("class", "rect")
+		        	.attr('width', '100%')
+		        	.attr('height', 400)
+		        	.append("g");
+
+				d3.json("https://raw.githubusercontent.com/AlexandrePoussard/Climate-Change-Visualization/master/data/countries_custom.geo.json", function(error, json){
+			    	d3.json("https://www.alexandrepoussard.com/middle_east_late2016.json", function(error, data){
+			    		if (error) throw error;
+			    		svg2
+							.selectAll("path")
+							.data(json.features)
+							.enter()
+							.append("path")
+							.attr("d", path)
+							.style("fill", 'white')
+							.attr("id", function(d) { return d.id; });
+
+						svg2.selectAll("text")
+							.data(json.features)
+							.enter().append("text")
+							.attr("transform", (d) => "translate(" + path.centroid(d) + ")")
+							.attr("dx", -5)
+							.attr('font-size', '35%')
+							.text((d) => d.properties.name);
+			    	});
+				});
+
 
 				d3.json("https://www.alexandrepoussard.com/clusterN1.json", function(error, classes) {
 			        if (error) throw error;
@@ -302,6 +357,8 @@
 			            .on("mouseover", mouseovered)
 			            .on("mouseout", mouseouted);
 			    });
+
+			    
 
 
 		        function mouseovered(d) {
