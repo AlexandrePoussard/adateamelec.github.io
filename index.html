@@ -15,6 +15,16 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<style>
+			.rect {
+			    /*background-color: rgba(135, 206, 250, 0.3);*/
+			    background-color: #A9A9A9;
+			}
+
+			#cluster g{
+				stroke:#000;
+				stroke-width: 0.15;
+			}
+
 			.node {
 			  font: 300 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
 			}
@@ -212,10 +222,10 @@
 
 				<!-- Cluster Map -->
 				
-				<section id="diagram" class="wrapper alt style1" style="background-color: white; padding-top: 50px; padding-bottom: 35px;">
+				<section id="diagram" class="wrapper alt style1" style="background-color: #A9A9A9; padding-top: 50px; padding-bottom: 35px;">
 					<div class="inner txt">
 						<header class="major">
-							<p>
+							<p style="color: black;">
 								Finally, by combining informations from the locations and date of each group terrorist attacks, we could infer their region of influence. In addition to the relations between groups displayed above, one can have a better understanding of why certain groups might dispute their boundaries, as they try to extend their area of influence.
 							</p>
 						</header>
@@ -293,7 +303,7 @@
 		        	.append("g");
 
 				d3.json("https://raw.githubusercontent.com/AdaTeamElec/adateamelec.github.io/master/data/countries_custom.geo.json", function(error, json){
-			    	d3.json("data/middle_east_late2016.json", function(error, data){
+			    	d3.json("data/middle_east_late2016.json", function(error2, data){
 			    		if (error) throw error;
 
 			    		svg2.selectAll("path")
