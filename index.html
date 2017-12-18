@@ -292,7 +292,7 @@
 		        	.attr('height', 400)
 		        	.append("g");
 
-				d3.json("data/countries_custom.geo.json", function(error, json){
+				d3.json("https://raw.githubusercontent.com/AdaTeamElec/adateamelec.github.io/master/data/countries_custom.geo.json", function(error, json){
 			    	d3.json("data/middle_east_late2016.json", function(error, data){
 			    		if (error) throw error;
 
