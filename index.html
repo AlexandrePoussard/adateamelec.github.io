@@ -99,8 +99,8 @@
 					<section id="interactive" class="wrapper style2 special" style="background-color: black;">
 						<div class="inner">
 							<header class="major txt">
-								<h2>Un titre que je sais pas quoi mettre</h2>
-								<p>
+								<h2>A Brief Overview of Terrorism</h2>
+								<p style="padding-top: 5%;">
 									Terrorism, as described by the Oxford dictionary is "The unlawful use of violence and intimidation, especially against civilians, in the pursuit of political aims."  The term comes from the late 18th century (in reference to the rule of the Jacobin faction during the the period of the French Revolution known as the Terror). We are a long way from the 18th century, however, Humans have not left behind this terrible invention. <br>
 									Since more than 200 years, terror attacks are plaguing the world, but we will not be able to go that far in history. Our dataset entries begin in 1970, and has been updated for the last time in late 2016. As an initial approach to understand that terrorism has always been a global problem, you will find a map displaying the location of attacks for each years beginning in 1970 until today. Fortunately, attacks are not happening always at the same place, but we see that the phenomenon is present every years, at different locations. Feel free to play with the map, stop during a specific year and zoom to a particular place.
 								</p>
@@ -115,7 +115,7 @@
 						<!-- barchart -->
 						<section class="spotlight txt">
 							<div class="image" style="padding-left: 7.5%;">
-								<h2>Some Statistics</h2>
+								<h2 style="padding-top: 50px;">Some Statistics</h2>
 								<p>
 									Over the years, the number of attacks, and, as a result, the number of casualties linked to them has changed. There is a slow but steady increase of attacks from 1970 to 1992. Please note that in 1993 was not a year where a worldwide ceasefire was achieved, the lack of data comes from a misplacement of the data collected resulting in the complete loss of the year entries. That being said, a reduction in the number of terror attack is visible from 1994 to 2005. After that, the number of attacks increased again, with a peak in 2014, before slowly fading again. <br>
 									Those fluctuations of attacks, and casualties, are closely linked to the geopolitical situation of the world. For example, the high increase in the  number of attacks in 1989-1992 is linked to the collapse of the Soviet bloc as well as the first Gulf War and the turmoil it created. In 1997, the Algerian Civil war created a peak of victims. An other event can be highlighted in 2001, with many casualties linked to the 9/11 Twin Tower terror attack. Since 2012, the number of incident and casualties has particularly increased due to the appearance of Daesh and the multiplication of attacks led by this terrorist group. 
@@ -146,18 +146,8 @@
 								</p>
 							</div>
 							<div class="content">
-								<img src="data/heatmap_reagionattacks-1.svg" alt="heatmap_reagionattacks" style="max-width: 100%;"/>
-							</div>
-						</section>
-
-						<section class="spotlight txt" style="padding-top: 35px; padding-bottom: 50px; background-color: rgba(0, 0, 0, 0.15);">
-							<div class="image" style="margin-right: 4%;">
-								<p>
-									Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla.
-								</p>
-							</div>
-							<div class="content">
-								<img src="data/heatmap_regioncasualties-1.svg" alt="heatmap_regioncasualties" style="max-width: 100%;"/>
+								<img src="data/heatmap_reagionattacks-1.svg" alt="heatmap_reagionattacks" style="max-width: 100%;padding-bottom: 14.5%;"/>
+								<img src="data/heatmap_regioncasualties-1.svg" alt="heatmap_regioncasualties" style="max-width: 100%; padding-top: 5%;"/>
 							</div>
 						</section>
 					</section>
@@ -302,7 +292,7 @@
 		        	.attr('height', 400)
 		        	.append("g");
 
-				d3.json("https://raw.githubusercontent.com/AdaTeamElec/adateamelec.github.io/master/data/countries_custom.geo.json", function(error, json){
+				d3.json("data/countries_custom.geo.json", function(error, json){
 			    	d3.json("data/middle_east_late2016.json", function(error, data){
 			    		if (error) throw error;
 
