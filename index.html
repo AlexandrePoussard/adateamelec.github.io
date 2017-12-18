@@ -326,16 +326,16 @@
 						  	.attr("r",  function(d) {	return d.radius*5;	})
 						    .style('fill', function(d){
 						    	switch(d.name){
-						    		case "Palestinian Extremists": return "red"; break;
+						    		case "Palestinian Extremists": return "rgb(250, 141, 103)"; break;
 					        		case "Fetullah Terrorist Organization": return "white"; break;
 					        		case "Barqa Province of the Islamic State": return "#ffdb0e"; break;
 					        		case "Kurdistan Workers' Party (PKK)": return "green"; break;
-					        		case "Sinai Province of the Islamic State": return "blue"; break;
-					        		case "Hadramawt Province of the Islamic State": return "#0fb7ff"; break;
+					        		case "Sinai Province of the Islamic State": return "#00e1ff"; break;
+					        		case "Hadramawt Province of the Islamic State": return "blue"; break;
 					        		case "Al-Qaida in the Arabian Peninsula (AQAP)": return "rgb(203, 111, 66)"; break;
-					        		case "Houthi extremists (Ansar Allah)": return "#00e1ff"; break;
+					        		case "Houthi extremists (Ansar Allah)": return "#0fb7ff"; break;
 									case "Adan-Abyan Province of the Islamic State": return "rgb(105, 193, 165)"; break;
-					        		case "Islamic State of Iraq and the Levant (ISIL)": return "rgb(250, 141, 103)"; break;
+					        		case "Islamic State of Iraq and the Levant (ISIL)": return "red"; break;
 					        		case "Al-Nusrah Front": return "rgb(230, 140, 194)"; break;
 					        		case "Tripoli Province of the Islamic State": return "orange"; break;
 						    	}
@@ -344,7 +344,6 @@
 			    	});
 				});
 
-				// https://www.alexandrepoussard.com/clusterN1.json
 				d3.json("data/clusterN1.json", function(error, classes) {
 			        if (error) throw error;
 
