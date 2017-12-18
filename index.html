@@ -209,7 +209,7 @@
 				</section>
 
 				<!-- Chord Diagram -->
-				<section id="diagram" class="wrapper alt style2" style="padding-top: 50px; padding-bottom: 35px;">
+				<section id="diagram" class="wrapper alt style2" style="text-align: center;padding-top: 50px; padding-bottom: 35px;">
 					<div class="inner txt">
 						<header class="major">
 							<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
@@ -250,7 +250,6 @@
 			<script src="assets/js/main.js"></script>
 			<script src="https://d3js.org/d3.v4.min.js"></script>
 			<script src="https://d3js.org/d3-hierarchy.v1.min.js"></script>
-			<script src="d3-tip.js"></script>
 			<script type="text/javascript">
 				$(document).ready(function() {
 				    $(window).scroll(function() {
@@ -299,8 +298,8 @@
 		        	.attr('height', 400)
 		        	.append("g");
 
-				d3.json("https://raw.githubusercontent.com/AlexandrePoussard/Climate-Change-Visualization/master/data/countries_custom.geo.json", function(error, json){
-			    	d3.json("https://www.alexandrepoussard.com/middle_east_late2016.json", function(error, data){
+				d3.json("data/countries_custom.geo.json", function(error, json){
+			    	d3.json("data/middle_east_late2016.json", function(error, data){
 			    		if (error) throw error;
 
 			    		svg2.selectAll("path")
@@ -330,24 +329,25 @@
 						    .style('fill', function(d){
 						    	switch(d.name){
 						    		case "Palestinian Extremists": return "red"; break;
-					        		case "Fetullah Terrorist Organization": return "blue"; break;
-					        		case "Barqa Province of the Islamic State": return "Navy"; break;
+					        		case "Fetullah Terrorist Organization": return "white"; break;
+					        		case "Barqa Province of the Islamic State": return "#ffdb0e"; break;
 					        		case "Kurdistan Workers' Party (PKK)": return "green"; break;
-					        		case "Sinai Province of the Islamic State": return "orange"; break;
-					        		case "Hadramawt Province of the Islamic State": return "MediumVioletRed"; break;
+					        		case "Sinai Province of the Islamic State": return "blue"; break;
+					        		case "Hadramawt Province of the Islamic State": return "#0fb7ff"; break;
 					        		case "Al-Qaida in the Arabian Peninsula (AQAP)": return "rgb(203, 111, 66)"; break;
-					        		case "Houthi extremists (Ansar Allah)": return "brown"; break;
-									case "Adan-Abyan Province of the Islamic State": return "Indigo"; break;
-					        		case "Islamic State of Iraq and the Levant (ISIL)": return "Aqua"; break;
-					        		case "Al-Nusrah Front": return "Magenta"; break;
-					        		case "Tripoli Province of the Islamic State": return "Magenta"; break;
+					        		case "Houthi extremists (Ansar Allah)": return "#00e1ff"; break;
+									case "Adan-Abyan Province of the Islamic State": return "rgb(105, 193, 165)"; break;
+					        		case "Islamic State of Iraq and the Levant (ISIL)": return "rgb(250, 141, 103)"; break;
+					        		case "Al-Nusrah Front": return "rgb(230, 140, 194)"; break;
+					        		case "Tripoli Province of the Islamic State": return "orange"; break;
 						    	}
 						    })
 						    .on('mouseover', function(d){	d3.select('#legend').text(d.name).style('color', 'black');	});
 			    	});
 				});
 
-				d3.json("https://www.alexandrepoussard.com/clusterN1.json", function(error, classes) {
+				// https://www.alexandrepoussard.com/clusterN1.json
+				d3.json("data/clusterN1.json", function(error, classes) {
 			        if (error) throw error;
 
 			        var root = d3.hierarchy(packageHierarchy(classes), (d) => d.children);
