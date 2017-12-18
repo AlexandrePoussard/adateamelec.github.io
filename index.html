@@ -223,9 +223,9 @@
 								Finally, by combining informations from the locations and date of each group terrorist attacks, we could infer their region of influence. In addition to the relations between groups displayed above, one can have a better understanding of why certain groups might dispute their boundaries, as they try to extend their area of influence.
 							</p>
 						</header>
-						<div id="legend"></div>
 						<div id="cluster" style="width: 100%; height: 400px;"></div>
 						<div><p style="color: white;">(Go over the dots to display the names)</p></div>
+						<div id="legend"></div>
 					</div>
 				</section>
 				
@@ -340,7 +340,7 @@
 					        		case "Tripoli Province of the Islamic State": return "orange"; break;
 						    	}
 						    })
-						    .on('mouseover', function(d){	d3.select('#legend').text(d.name).style('color', 'black');	});
+						    .on('mouseover', function(d){	d3.select('#legend').text(d.name).style('color', 'white');	});
 			    	});
 				});
 
