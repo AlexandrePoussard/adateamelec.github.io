@@ -48,18 +48,25 @@
 			  	font-weight: 700;
 			}
 
-			.link--ennemy { /*rouge*/
+			.link--ennemy { /* red */
 				stroke-opacity: 0.4;
 				pointer-events: none;
 				fill: none;
 				stroke: #d62728;
 			}
 
-			.link--friends { /*vert*/
+			.link--friends { /* green */
 				stroke-opacity: 0.4;
 				pointer-events: none;
 				fill: none;
 				stroke: #2ca02c;
+			}
+
+			.link--unselected--hover { /* grey */
+				stroke-opacity: 0.4;
+				pointer-events: none;
+				fill: none;
+				stroke: #888888;
 			}
 
 			.link--ennemy--hover{
@@ -233,7 +240,7 @@
 								Finally, by combining informations from the locations and date of each group terrorist attacks, we could infer their region of influence. In addition to the relations between groups displayed above, one can have a better understanding of why certain groups might dispute their boundaries, as they try to extend their area of influence.
 							</p>
 						</header>
-						<div id="cluster" style="width: 100%; height: 400px;"></div>
+						<div id="cluster" style="width: 100%; height: 600px;"></div>
 						<div><p style="color: white;">(Go over the dots to display the names)</p></div>
 
 					</div>
@@ -284,6 +291,10 @@
 				    .radius(function(d) { return d.y; })
 				    .angle(function(d) { return d.x / 180 * Math.PI; });
 
+				var colors_plot = [ "#3957ff", "#d3fe14", "#c9080a", "#fec7f8", "#0b7b3e", "#0bf0e9", "#c203c8",
+									"#fd9b39", "#906407", "#98ba7f", "#fe6794", "#10b0ff", "#ac7bff", "#fee7c0",
+									"#964c63", "#1da49c", "#0ad811", "#bbd9fd", "#fe6cfe", "#297192"];
+
 				var svg = d3.select("#ennemy").append("svg")
 				    .attr("width", diameter)
 				    .attr("height", diameter)
@@ -293,9 +304,9 @@
 				var link = svg.append("g").selectAll(".link"),
 				    node = svg.append("g").selectAll(".node");
 
-				var projection = d3.geoEquirectangular()
-		        	.scale(650)
-		        	.translate([195, 500]);
+				var projection = d3.geoMercator()
+		        	.scale(900)
+		        	.center([33.8, 30]);
 
 				var path = d3.geoPath()
     				.projection(projection);
@@ -309,7 +320,7 @@
     			var svg2 = d3.select('#cluster').append('svg')
     				.attr("class", "rect")
 		        	.attr('width', '100%')
-		        	.attr('height', 400)
+		        	.attr('height', 600)
 		        	.append("g");
 
 				d3.json("https://raw.githubusercontent.com/AdaTeamElec/adateamelec.github.io/master/data/countries_custom.geo.json", function(error, json){
@@ -339,41 +350,15 @@
 						  	.enter().append("circle")
 						  	.attr("cx", function(d) {	 return projection([d.longitude, d.latitude])[0];	})
 						  	.attr("cy", function(d) {	return projection([d.longitude, d.latitude])[1];	})
-						  	.attr("r",  function(d) {	return d.radius*5;	})
+						  	.attr("r",  function(d) {	return 1 + d.radius*5;	})
 						    .style('fill', function(d){
-						    	switch(d.name){
-						    		case "Palestinian Extremists": return "rgb(250, 141, 103)"; break;
-					        		case "Fetullah Terrorist Organization": return "pink"; break;
-					        		case "Barqa Province of the Islamic State": return "#ffdb0e"; break;
-					        		case "Kurdistan Workers' Party (PKK)": return "green"; break;
-					        		case "Sinai Province of the Islamic State": return "#00e1ff"; break;
-					        		case "Hadramawt Province of the Islamic State": return "blue"; break;
-					        		case "Al-Qaida in the Arabian Peninsula (AQAP)": return "rgb(203, 111, 66)"; break;
-					        		case "Houthi extremists (Ansar Allah)": return "#0fb7ff"; break;
-									case "Adan-Abyan Province of the Islamic State": return "rgb(105, 193, 165)"; break;
-					        		case "Islamic State of Iraq and the Levant (ISIL)": return "red"; break;
-					        		case "Al-Nusrah Front": return "rgb(230, 140, 194)"; break;
-					        		case "Tripoli Province of the Islamic State": return "orange"; break;
-						    	}
+						    	return colors_plot[d.id_group]
 						    })
-						    .on('mouseover', function(d){	
-							console.log('name', d, d.name)
+						    .on('mouseover', function(d){
+
 							d3.selectAll("circle").style("fill", function(dr){
-								if(dr.name == d.name) {
-									switch(dr.name){
-								    		case "Palestinian Extremists": return "rgb(250, 141, 103)"; break;
-										case "Fetullah Terrorist Organization": return "pink"; break;
-										case "Barqa Province of the Islamic State": return "#ffdb0e"; break;
-										case "Kurdistan Workers' Party (PKK)": return "green"; break;
-										case "Sinai Province of the Islamic State": return "#00e1ff"; break;
-										case "Hadramawt Province of the Islamic State": return "blue"; break;
-										case "Al-Qaida in the Arabian Peninsula (AQAP)": return "rgb(203, 111, 66)"; break;
-										case "Houthi extremists (Ansar Allah)": return "#0fb7ff"; break;
-											case "Adan-Abyan Province of the Islamic State": return "rgb(105, 193, 165)"; break;
-										case "Islamic State of Iraq and the Levant (ISIL)": return "red"; break;
-										case "Al-Nusrah Front": return "rgb(230, 140, 194)"; break;
-										case "Tripoli Province of the Islamic State": return "orange"; break;
-							    		}
+								if(dr.id_group == d.id_group) {
+									return colors_plot[d.id_group]
 								}
 								return 'grey'	
 							})
@@ -388,22 +373,8 @@
 						    .on("mouseout", function(d) {
 
 							d3.selectAll("circle").style("fill", function(dr){
-								switch(dr.name){
-							    		case "Palestinian Extremists": return "rgb(250, 141, 103)"; break;
-									case "Fetullah Terrorist Organization": return "pink"; break;
-									case "Barqa Province of the Islamic State": return "#ffdb0e"; break;
-									case "Kurdistan Workers' Party (PKK)": return "green"; break;
-									case "Sinai Province of the Islamic State": return "#00e1ff"; break;
-									case "Hadramawt Province of the Islamic State": return "blue"; break;
-									case "Al-Qaida in the Arabian Peninsula (AQAP)": return "rgb(203, 111, 66)"; break;
-									case "Houthi extremists (Ansar Allah)": return "#0fb7ff"; break;
-										case "Adan-Abyan Province of the Islamic State": return "rgb(105, 193, 165)"; break;
-									case "Islamic State of Iraq and the Levant (ISIL)": return "red"; break;
-									case "Al-Nusrah Front": return "rgb(230, 140, 194)"; break;
-									case "Tripoli Province of the Islamic State": return "orange"; break;
-						    		}
-								
-							})		
+								return colors_plot[dr.id_group]
+							})
 						        div.transition()		
 							    .duration(500)		
 							    .style("opacity", 0);
@@ -452,8 +423,18 @@
 			            .each(function(n) { n.target = n.source = false; });
 
 			        link
-			            .classed("link--ennemy--hover", function(l) { if (l.target === d & l.ennemy === 'true') return l.source.source = true; })
-			            .classed("link--friends--hover", function(l) { if (l.target === d & l.ennemy === 'false') return l.target.target = true; })
+			            .classed("link--ennemy--hover", function(l) {
+			            		if ((l.target === d || l.source === d) & l.ennemy === 'true') {
+									return true;
+                                }
+                        })
+			            .classed("link--friends--hover", function(l) {
+
+                            if ((l.target === d || l.source === d) & l.ennemy === 'false') {
+                                return true;
+                            }
+                        })
+						.classed("link--unselected--hover", function(l) { if (l.target !== d && l.source !== d) return true})
 			            .filter(function(l) { return l.target === d || l.source === d; })
 			            .each(function() { this.parentNode.appendChild(this); });
 
@@ -465,7 +446,8 @@
 			    function mouseouted(d) {
 			        link
 			            .classed("link--ennemy--hover", false)
-			            .classed("link--friends--hover", false);
+			            .classed("link--friends--hover", false)
+			        	.classed("link--unselected--hover", false);
 
 			        node
 			            .classed("node--target", false)
@@ -515,7 +497,7 @@
 			        		case "5": d.data.color = "#0fb7ff"; break;
 			        		case "6": d.data.color = "rgb(203, 111, 66)"; break;
 			        		case "7": d.data.color = "#00e1ff"; break;
-						case "8": d.data.color = "rgb(105, 193, 165)"; break;
+							case "8": d.data.color = "rgb(105, 193, 165)"; break;
 			        		case "9": d.data.color = "rgb(250, 141, 103)"; break;
 			        		case "10": d.data.color = "rgb(230, 140, 194)"; break;
 			        	}
