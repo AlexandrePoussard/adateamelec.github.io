@@ -71,6 +71,16 @@
 				stroke-opacity: 1;
 				stroke-width: 2px;
 			}
+			div.tooltip {	
+			    position: absolute;			
+			    text-align: center;	
+			    padding: 10px;				
+			    font: 12px sans-serif;		
+			    background: rgba(0, 0, 0, 0.8);	
+			    border: 0px;		
+			    border-radius: 8px;			
+			    pointer-events: none;			
+			}
 		</style>
 	</head>
 	<body class="landing">
@@ -225,7 +235,7 @@
 						</header>
 						<div id="cluster" style="width: 100%; height: 400px;"></div>
 						<div><p style="color: white;">(Go over the dots to display the names)</p></div>
-						<div id="legend"></div>
+
 					</div>
 				</section>
 				
@@ -290,6 +300,12 @@
 				var path = d3.geoPath()
     				.projection(projection);
 
+				// Define the div for the tooltip
+				var div = d3.select("#cluster").append("div")	
+				    .attr("class", "tooltip")				
+				    .style("opacity", 0);
+
+
     			var svg2 = d3.select('#cluster').append('svg')
     				.attr("class", "rect")
 		        	.attr('width', '100%')
@@ -340,7 +356,59 @@
 					        		case "Tripoli Province of the Islamic State": return "orange"; break;
 						    	}
 						    })
-						    .on('mouseover', function(d){	d3.select('#legend').text(d.name).style('color', 'white');	});
+						    .on('mouseover', function(d){	
+							console.log('name', d, d.name)
+							d3.selectAll("circle").style("fill", function(dr){
+								if(dr.name == d.name) {
+									switch(dr.name){
+								    		case "Palestinian Extremists": return "rgb(250, 141, 103)"; break;
+										case "Fetullah Terrorist Organization": return "pink"; break;
+										case "Barqa Province of the Islamic State": return "#ffdb0e"; break;
+										case "Kurdistan Workers' Party (PKK)": return "green"; break;
+										case "Sinai Province of the Islamic State": return "#00e1ff"; break;
+										case "Hadramawt Province of the Islamic State": return "blue"; break;
+										case "Al-Qaida in the Arabian Peninsula (AQAP)": return "rgb(203, 111, 66)"; break;
+										case "Houthi extremists (Ansar Allah)": return "#0fb7ff"; break;
+											case "Adan-Abyan Province of the Islamic State": return "rgb(105, 193, 165)"; break;
+										case "Islamic State of Iraq and the Levant (ISIL)": return "red"; break;
+										case "Al-Nusrah Front": return "rgb(230, 140, 194)"; break;
+										case "Tripoli Province of the Islamic State": return "orange"; break;
+							    		}
+								}
+								return 'grey'	
+							})
+						    	
+							div.transition()		
+								.duration(200)		
+								.style("opacity", .9);		
+							    div.html(d.name)
+								.style("left", (d3.event.pageX) + "px")		
+                						.style("top", (d3.event.pageY - 28) + "px");		
+							})
+						    .on("mouseout", function(d) {
+
+							d3.selectAll("circle").style("fill", function(dr){
+								switch(dr.name){
+							    		case "Palestinian Extremists": return "rgb(250, 141, 103)"; break;
+									case "Fetullah Terrorist Organization": return "pink"; break;
+									case "Barqa Province of the Islamic State": return "#ffdb0e"; break;
+									case "Kurdistan Workers' Party (PKK)": return "green"; break;
+									case "Sinai Province of the Islamic State": return "#00e1ff"; break;
+									case "Hadramawt Province of the Islamic State": return "blue"; break;
+									case "Al-Qaida in the Arabian Peninsula (AQAP)": return "rgb(203, 111, 66)"; break;
+									case "Houthi extremists (Ansar Allah)": return "#0fb7ff"; break;
+										case "Adan-Abyan Province of the Islamic State": return "rgb(105, 193, 165)"; break;
+									case "Islamic State of Iraq and the Levant (ISIL)": return "red"; break;
+									case "Al-Nusrah Front": return "rgb(230, 140, 194)"; break;
+									case "Tripoli Province of the Islamic State": return "orange"; break;
+						    		}
+								
+							})		
+						        div.transition()		
+							    .duration(500)		
+							    .style("opacity", 0);
+	
+   						     });
 			    	});
 				});
 
