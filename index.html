@@ -264,7 +264,7 @@
 				        $('.txt').each(function(i) {
 				            var bottom_of_object = $(this).position().top + $(this).outerHeight();
 				            var bottom_of_window = $(window).scrollTop() + $(window).height();
-				            if(bottom_of_window*1.4 > bottom_of_object) {
+				            if(bottom_of_window*1.35 > bottom_of_object) {
 				                $(this).animate({'opacity':'1'},1500);
 				            }
         				}); 
@@ -357,11 +357,10 @@
 						    	}
 						    })
 						    .on('mouseover', function(d){	
-							console.log('name', d, d.name)
 							d3.selectAll("circle").style("fill", function(dr){
 								if(dr.name == d.name) {
 									switch(dr.name){
-								    		case "Palestinian Extremists": return "rgb(250, 141, 103)"; break;
+								    	case "Palestinian Extremists": return "rgb(250, 141, 103)"; break;
 										case "Fetullah Terrorist Organization": return "pink"; break;
 										case "Barqa Province of the Islamic State": return "#ffdb0e"; break;
 										case "Kurdistan Workers' Party (PKK)": return "green"; break;
@@ -369,7 +368,7 @@
 										case "Hadramawt Province of the Islamic State": return "blue"; break;
 										case "Al-Qaida in the Arabian Peninsula (AQAP)": return "rgb(203, 111, 66)"; break;
 										case "Houthi extremists (Ansar Allah)": return "#0fb7ff"; break;
-											case "Adan-Abyan Province of the Islamic State": return "rgb(105, 193, 165)"; break;
+										case "Adan-Abyan Province of the Islamic State": return "rgb(105, 193, 165)"; break;
 										case "Islamic State of Iraq and the Levant (ISIL)": return "red"; break;
 										case "Al-Nusrah Front": return "rgb(230, 140, 194)"; break;
 										case "Tripoli Province of the Islamic State": return "orange"; break;
