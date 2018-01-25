@@ -1,0 +1,249 @@
+[{
+"name": "cluster1.Free People of the Galilee", 
+"ennemy": [], 
+"friends": ["cluster3.Al-Aqsa Martyrs Brigade", "cluster1.PFLP"], 
+"cluster":"1"}, {
+"name": "cluster0.Ahrar al-Sham", 
+"ennemy": ["cluster4.Al-Nasir Army (Syria)", "cluster4.Free Syrian Army", "cluster1.Jaish al-Mujahideen (Syria)"], 
+"friends": ["cluster0.Ajnad al-Sham", "cluster0.Al-Furqan Brigades", "cluster0.Al-Nusrah Front", "cluster0.Al-Sham Legion", "cluster0.Jund al-Aqsa", "cluster1.Free Idlib Army", "cluster4.Jaysh al-Islam (Syria)", "cluster1.Shamiya Front", "cluster1.Southern Front", "cluster0.Ansar al-Din Front"], 
+"cluster":"0"}, {
+"name": "cluster0.Ajnad al-Sham", 
+"ennemy": ["cluster1.Shamiya Front", "cluster1.Southern Front"], 
+"friends": ["cluster0.Al-Nusrah Front", "cluster4.Free Syrian Army", "cluster0.Jaish al-Sunnah"], 
+"cluster":"0"}, {
+"name": "cluster3.Al-Aqsa Martyrs Brigade", 
+"ennemy": ["cluster8.Palestinian Hezbollah", "cluster2.Islamic Resistance Movement", "cluster8.Palestinian Islamic Jihad (PIJ)", "cluster1.PFLP", "cluster2.Al-Qassam Brigades", "cluster1.Other", "cluster2.Umar al-Mukhtar Martyr Forces"], 
+"friends": ["cluster3.Al-Aqsa Martyrs Brigade", "cluster3.Ansar Al Sunnah (Palestine)", "cluster3.DFLP", "cluster1.Tanzim"], 
+"cluster":"3"}, {
+"name": "cluster10.MILF", 
+"ennemy": ["cluster4.Abu Sayyaf Group (ASG)", "cluster5.BIFM"], 
+"friends": [], 
+"cluster":"10"}, {
+"name": "cluster0.Al-Furqan Brigades", 
+"ennemy": [], 
+"friends": ["cluster0.Al-Nusrah Front"], 
+"cluster":"0"}, {
+"name": "cluster1.New People's Army (NPA)", 
+"ennemy": ["cluster4.Abu Sayyaf Group (ASG)"], 
+"friends": [], 
+"cluster":"1"}, {
+"name": "cluster4.Al-Nasir Army (Syria)", 
+"ennemy": ["cluster4.Free Syrian Army", "cluster1.Southern Front"], 
+"friends": ["cluster0.Al-Sham Legion"], 
+"cluster":"4"}, {
+"name": "cluster0.Al-Nusrah Front", 
+"ennemy": ["cluster4.Free Syrian Army", "cluster1.Tajamo Ansar al-Islam", "cluster9.ISIL", "cluster1.Abdullah Azzam Brigades", "cluster1.GDOR", "cluster1.NHCOR", "cluster1.Ayesha bint al-Sadiq Brigade", "cluster1.Jaish al-Mujahideen (Syria)", "cluster4.Liwa Ahrar al-Sunna"], 
+"friends": ["cluster0.Al-Sham Legion", "cluster4.Islamic Front (Syria)", "cluster0.Jund al-Aqsa", "cluster0.Jaish al-Sunnah", "cluster4.Jaysh al-Islam (Syria)", "cluster0.Ansar al-Din Front"], 
+"cluster":"0"}, {
+"name": "cluster1.Nur-al-Din al-Zinki Movement", 
+"ennemy": ["cluster4.Free Syrian Army", "cluster1.Shamiya Front", "cluster0.Ansar al-Din Front", "cluster4.ADF"], 
+"friends": [], 
+"cluster":"1"}, {
+"name": "cluster8.Palestinian Hezbollah", 
+"ennemy": ["cluster2.Islamic Resistance Movement", "cluster2.Umar al-Mukhtar Martyr Forces"], 
+"friends": [], 
+"cluster":"8"}, {
+"name": "cluster0.Al-Sham Legion", 
+"ennemy": ["cluster4.Free Syrian Army"], 
+"friends": ["cluster1.Shamiya Front", "cluster0.Ansar al-Din Front"], 
+"cluster":"0"}, {
+"name": "cluster3.Ansar Al Sunnah (Palestine)", 
+"ennemy": [], 
+"friends": [], 
+"cluster":"3"}, {
+"name": "cluster7.Sheikh Omar Hadid Brigade", 
+"ennemy": ["cluster1.Abdullah Azzam Brigades"], 
+"friends": [], 
+"cluster":"7"}, {
+"name": "cluster3.DFLP", 
+"ennemy": ["cluster2.Islamic Resistance Movement", "cluster1.PFLP", "cluster8.Popular Resistance Committees"], 
+"friends": [], 
+"cluster":"3"}, {
+"name": "cluster4.Free Syrian Army", 
+"ennemy": ["cluster1.Tajamo Ansar al-Islam", "cluster1.Free Idlib Army", "cluster1.Shamiya Front", "cluster1.Southern Front", "cluster1.NHCOR", "cluster0.Ansar al-Din Front", "cluster1.Liwa al-Islam", "cluster1.Syrian Turkmen Brigades"], 
+"friends": ["cluster4.Islamic Front (Syria)"], 
+"cluster":"4"}, {
+"name": "cluster1.Tajamo Ansar al-Islam", 
+"ennemy": [], 
+"friends": [], 
+"cluster":"1"}, {
+"name": "cluster2.Islamic Resistance Movement", 
+"ennemy": ["cluster1.PFLP", "cluster8.Popular Resistance Committees", "cluster1.Abdullah Azzam Brigades", "cluster4.Hezbollah"], 
+"friends": ["cluster2.Al-Fatah"], 
+"cluster":"2"}, {
+"name": "cluster4.Islamic Front (Syria)", 
+"ennemy": [], 
+"friends": [], 
+"cluster":"4"}, {
+"name": "cluster0.Jund al-Aqsa", 
+"ennemy": [], 
+"friends": [], 
+"cluster":"0"}, {
+"name": "cluster1.Tanzim", 
+"ennemy": [], 
+"friends": ["cluster1.PFLP"], 
+"cluster":"1"}, {
+"name": "cluster9.ISIL", 
+"ennemy": ["cluster4.Jaysh al-Islam (Syria)", "cluster1.Southern Front", "cluster1.Maute Group", "cluster4.Abu Sayyaf Group (ASG)", "cluster4.MCTR", "cluster4.Al-Naqshabandiya Army", "cluster4.Hezbollah", "cluster4.Kurdish Islamic Group (KIG)", "cluster1.Jundul Khilafah (Philippines)", "cluster1.Kurdistan Freedom Hawks (TAK)", "cluster6.Kurdistan Workers' Party (PKK)", "cluster4.Liwa Ahrar al-Sunna"], 
+"friends": [], 
+"cluster":"9"}, {
+"name": "cluster0.Jaish al-Sunnah", 
+"ennemy": [], 
+"friends": [], 
+"cluster":"0"}, {
+"name": "cluster1.Free Idlib Army", 
+"ennemy": ["cluster4.Jaysh al-Islam (Syria)"], 
+"friends": [], 
+"cluster":"1"}, {
+"name": "cluster4.Jaysh al-Islam (Syria)", 
+"ennemy": ["cluster1.Shamiya Front", "cluster1.Southern Front", "cluster1.Jaish al-Mujahideen (Syria)"], 
+"friends": ["cluster0.Ansar al-Din Front"], 
+"cluster":"4"}, {
+"name": "cluster8.Palestinian Islamic Jihad (PIJ)", 
+"ennemy": ["cluster1.PFLP", "cluster1.Other", "cluster1.Conqueror Army"], 
+"friends": ["cluster8.Popular Resistance Committees", "cluster2.Al-Fatah"], 
+"cluster":"8"}, {
+"name": "cluster1.PFLP", 
+"ennemy": ["cluster8.Popular Resistance Committees", "cluster2.Al-Qassam Brigades", "cluster1.Conqueror Army", "cluster2.ASABM"], 
+"friends": [], 
+"cluster":"1"}, {
+"name": "cluster8.Popular Resistance Committees", 
+"ennemy": [], 
+"friends": [], 
+"cluster":"8"}, {
+"name": "cluster1.Shamiya Front", 
+"ennemy": ["cluster1.Southern Front", "cluster0.Ansar al-Din Front", "cluster1.Jaish al-Mujahideen (Syria)"], 
+"friends": [], 
+"cluster":"1"}, {
+"name": "cluster1.Southern Front", 
+"ennemy": ["cluster1.Jaish al-Mujahideen (Syria)"], 
+"friends": [], 
+"cluster":"1"}, {
+"name": "cluster7.AHKGM", 
+"ennemy": ["cluster1.Abdullah Azzam Brigades"], 
+"friends": [], 
+"cluster":"7"}, {
+"name": "cluster7.Egyptian Tawhid and Jihad", 
+"ennemy": ["cluster1.Abdullah Azzam Brigades"], 
+"friends": [], 
+"cluster":"7"}, {
+"name": "cluster1.Maute Group", 
+"ennemy": ["cluster4.Abu Sayyaf Group (ASG)"], 
+"friends": [], 
+"cluster":"1"}, {
+"name": "cluster2.Al-Qassam Brigades", 
+"ennemy": [], 
+"friends": [], 
+"cluster":"2"}, {
+"name": "cluster1.Other", 
+"ennemy": [], 
+"friends": [], 
+"cluster":"1"}, {
+"name": "cluster2.Umar al-Mukhtar Martyr Forces", 
+"ennemy": [], 
+"friends": [], 
+"cluster":"2"}, {
+"name": "cluster1.Abdullah Azzam Brigades", 
+"ennemy": [], 
+"friends": [], 
+"cluster":"1"}, {
+"name": "cluster4.Abu Sayyaf Group (ASG)", 
+"ennemy": ["cluster1.Jundul Khilafah (Philippines)"], 
+"friends": [], 
+"cluster":"4"}, {
+"name": "cluster2.Al-Fatah", 
+"ennemy": [], 
+"friends": [], 
+"cluster":"2"}, {
+"name": "cluster4.MCTR", 
+"ennemy": ["cluster4.Al-Naqshabandiya Army"], 
+"friends": [], 
+"cluster":"4"}, {
+"name": "cluster4.Al-Naqshabandiya Army", 
+"ennemy": [], 
+"friends": [], 
+"cluster":"4"}, {
+"name": "cluster1.GDOR", 
+"ennemy": [], 
+"friends": [], 
+"cluster":"1"}, {
+"name": "cluster1.NHCOR", 
+"ennemy": [], 
+"friends": [], 
+"cluster":"1"}, {
+"name": "cluster4.Al-Qaida", 
+"ennemy": ["cluster1.Adan Abyan Islamic Army (AAIA)", "cluster1.Jemaah Islamiya (JI)", "cluster1.Kurdistan Freedom Hawks (TAK)"], 
+"friends": [], 
+"cluster":"4"}, {
+"name": "cluster1.Adan Abyan Islamic Army (AAIA)", 
+"ennemy": [], 
+"friends": [], 
+"cluster":"1"}, {
+"name": "cluster0.Ansar al-Din Front", 
+"ennemy": ["cluster4.ADF"], 
+"friends": [], 
+"cluster":"0"}, {
+"name": "cluster4.ADF", 
+"ennemy": [], 
+"friends": [], 
+"cluster":"4"}, {
+"name": "cluster1.Ayesha bint al-Sadiq Brigade", 
+"ennemy": [], 
+"friends": [], 
+"cluster":"1"}, {
+"name": "cluster1.Liwa al-Islam", 
+"ennemy": [], 
+"friends": [], 
+"cluster":"1"}, {
+"name": "cluster1.Syrian Turkmen Brigades", 
+"ennemy": [], 
+"friends": [], 
+"cluster":"1"}, {
+"name": "cluster1.Conqueror Army", 
+"ennemy": [], 
+"friends": [], 
+"cluster":"1"}, {
+"name": "cluster4.Hezbollah", 
+"ennemy": [], 
+"friends": [], 
+"cluster":"4"}, {
+"name": "cluster4.Kurdish Islamic Group (KIG)", 
+"ennemy": [], 
+"friends": [], 
+"cluster":"4"}, {
+"name": "cluster1.Jaish al-Mujahideen (Syria)", 
+"ennemy": [], 
+"friends": [], 
+"cluster":"1"}, {
+"name": "cluster4.People's Defense Unit (Turkey)", 
+"ennemy": ["cluster6.Kurdistan Workers' Party (PKK)"], 
+"friends": [], 
+"cluster":"4"}, {
+"name": "cluster5.BIFM", 
+"ennemy": [], 
+"friends": [], 
+"cluster":"5"}, {
+"name": "cluster1.Jemaah Islamiya (JI)", 
+"ennemy": [], 
+"friends": [], 
+"cluster":"1"}, {
+"name": "cluster1.Jundul Khilafah (Philippines)", 
+"ennemy": [], 
+"friends": [], 
+"cluster":"1"}, {
+"name": "cluster2.ASABM", 
+"ennemy": [], 
+"friends": [], 
+"cluster":"2"}, {
+"name": "cluster1.Kurdistan Freedom Hawks (TAK)", 
+"ennemy": ["cluster6.Kurdistan Workers' Party (PKK)"], 
+"friends": [], 
+"cluster":"1"}, {
+"name": "cluster6.Kurdistan Workers' Party (PKK)", 
+"ennemy": [], 
+"friends": [], 
+"cluster":"6"}, {
+"name": "cluster4.Liwa Ahrar al-Sunna", 
+"ennemy": [], 
+"friends": [], 
+"cluster":"4"}]
